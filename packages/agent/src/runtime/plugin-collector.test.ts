@@ -9,6 +9,7 @@
  */
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 
+import cryptoQueenProfile from "../../../../config/crypto-queen.local.example.json";
 import type { ElizaConfig } from "../config/config.ts";
 import {
   CORE_PLUGINS,
@@ -449,6 +450,18 @@ describe("collectPluginNames x402, installs, and feature gates", () => {
     } as ElizaConfig);
     expect(names.has("@elizaos/plugin-discord")).toBe(false);
   });
+
+  it.each(["wallet", "@elizaos/plugin-wallet"])(
+    "keeps the Crypto Queen starter from loading wallet services even when %s is allow-listed",
+    (alias) => {
+      const config = structuredClone(cryptoQueenProfile) as ElizaConfig;
+      const names = collectPluginNames({
+        ...config,
+        plugins: { ...config.plugins, allow: [alias] },
+      });
+      expect(names.has("@elizaos/plugin-wallet")).toBe(false);
+    },
+  );
 });
 
 describe("collectPluginNames Google Workspace and calendar companion", () => {
