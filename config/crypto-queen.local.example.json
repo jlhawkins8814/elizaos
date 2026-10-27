@@ -11,13 +11,14 @@
   "plugins": {
     "entries": {
       "wallet": {
-        "enabled": true
+        "enabled": false
       }
     }
   },
   "env": {
     "vars": {
-      "ELIZA_AGENT_WALLET_AUTO_ENABLE": "0"
+      "ELIZA_AGENT_WALLET_AUTO_ENABLE": "0",
+      "ELIZA_DISABLE_AGENT_WALLET_BOOTSTRAP": "1"
     }
   },
   "ui": {
