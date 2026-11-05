@@ -147,7 +147,7 @@ jobs:
 
       - name: Upload app browser core artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-core
           path: |
@@ -209,7 +209,7 @@ jobs:
 
       - name: Upload app browser view lifecycle artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-view-lifecycle
           path: |
@@ -254,7 +254,7 @@ jobs:
 
       - name: Upload app browser all-pages artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-all-pages
           path: |
@@ -299,7 +299,7 @@ jobs:
 
       - name: Upload app browser feature interaction artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-feature-interactions
           path: |
@@ -344,7 +344,7 @@ jobs:
 
       - name: Upload app browser cloud keyless artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-cloud-keyless
           path: |
@@ -392,7 +392,7 @@ jobs:
 
       - name: Upload app browser extended artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-extended
           path: |
@@ -444,7 +444,7 @@ jobs:
 
       - name: Upload app browser perf KPI artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-perf-kpi
           path: |
@@ -505,7 +505,7 @@ jobs:
 
       - name: Upload app browser auto-discovered artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-auto-discovered
           path: |
@@ -560,7 +560,7 @@ jobs:
 
       - name: Upload dashboard device-matrix artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-touch-dashboard
           path: |
@@ -608,7 +608,7 @@ jobs:
 
       - name: Upload Pixel-7 real-touch artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-touch-mobile
           path: |
@@ -663,7 +663,7 @@ jobs:
 
       - name: Upload WebKit lane artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-browser-webkit
           path: |
@@ -723,7 +723,7 @@ jobs:
 
       - name: Upload accounts-ui evidence artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-accounts-ui
           path: ${{ runner.temp }}/evidence/10722-accounts-ui-e2e/
@@ -774,7 +774,7 @@ jobs:
 
       - name: Upload walkthrough screenshots + stitched recording + verdicts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-app-walkthrough-mock
           path: |
@@ -855,7 +855,7 @@ jobs:
 
       - name: Upload scenario report
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: scenario-pr-deterministic-report
           path: |

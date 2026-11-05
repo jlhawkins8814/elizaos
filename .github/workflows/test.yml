@@ -155,7 +155,7 @@ jobs:
         run: node packages/scripts/ci-bun-version-contract.mjs --inventory "$RUNNER_TEMP/bun-runtime-inventory.json"
 
       - name: Upload Bun runtime resolution inventory
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: bun-runtime-inventory
           path: ${{ runner.temp }}/bun-runtime-inventory.json
@@ -333,7 +333,7 @@ jobs:
 
       - name: Upload perf gate e2e artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: perf-gate-e2e-artifacts
           path: packages/ui/src/components/shell/__e2e__/output-perf-gate-e2e/
@@ -655,7 +655,7 @@ jobs:
 
       - name: Upload zero-key browser artifacts
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: tests-zero-key-browser
           path: |
@@ -782,7 +782,7 @@ jobs:
 
       - name: Upload deterministic E2E reports
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: tests-zero-key-e2e-report
           path: |
@@ -1008,7 +1008,7 @@ jobs:
 
       - name: Upload remote capability cloud live report
         if: steps.cloud.outputs.capability_skip != 'true' && (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule')
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: remote-capability-cloud-live-report
           path: reports/remote-capabilities/cloud/*.json
@@ -1127,7 +1127,7 @@ jobs:
 
       - name: Upload remote capability provider live report
         if: steps.providers.outputs.skip != 'true' && (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule')
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: remote-capability-provider-live-report
           path: reports/remote-capabilities/providers/*.json
@@ -1223,7 +1223,7 @@ jobs:
 
       - name: Upload script-test evidence
         if: always()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: script-tests-linux
           path: reports/script-tests/

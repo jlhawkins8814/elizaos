@@ -862,7 +862,7 @@ jobs:
 
       - name: Upload Electrobun build diagnostics
         if: failure()
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-${{ matrix.platform.artifact-name }}-build-diagnostics
           path: |
@@ -1201,7 +1201,7 @@ jobs:
 
       - name: Upload Windows installer proof artifact
         if: always() && matrix.platform.os == 'windows'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-windows-installer-proof
           path: packages/app-core/platforms/electrobun/artifacts/windows-installer-proof/**
@@ -1210,7 +1210,7 @@ jobs:
 
       - name: Upload Windows installer .exe + Inno log on smoke failure
         if: failure() && matrix.platform.os == 'windows'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-windows-installer-debug
           path: |
@@ -1225,7 +1225,7 @@ jobs:
 
       - name: Upload Windows Playwright UI diagnostics
         if: failure() && matrix.platform.os == 'windows'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-windows-ui-playwright-diagnostics
           # TODO: confirm packaged-app Playwright result location in eliza
@@ -1574,7 +1574,7 @@ jobs:
 
       - name: Upload Windows smoke diagnostics
         if: failure() && matrix.platform.os == 'windows'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-${{ matrix.platform.artifact-name }}-smoke-diagnostics
           path: packages/app-core/platforms/electrobun/artifacts/windows-smoke-diagnostics/**
@@ -1597,7 +1597,7 @@ jobs:
         if: >-
           (failure() || steps.macos-packaged-smoke.outcome == 'failure') &&
           matrix.platform.os == 'macos'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-${{ matrix.platform.artifact-name }}-smoke-diagnostics
           path: |
@@ -1699,7 +1699,7 @@ jobs:
 
       - name: Upload public canary installer artifact
         if: matrix.platform.os == 'windows' && needs.prepare.outputs.env == 'canary' && steps.build-electrobun-app.outputs.fallback != 'true'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-${{ matrix.platform.artifact-name }}-public-installer
           path: packages/app-core/platforms/electrobun/artifacts/public-canary-installer/*-Setup-*.exe
@@ -1708,7 +1708,7 @@ jobs:
           compression-level: 0
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-${{ matrix.platform.artifact-name }}
           path: |
@@ -1729,7 +1729,7 @@ jobs:
 
       - name: Upload MSIX artifact
         if: matrix.platform.os == 'windows'
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
         with:
           name: electrobun-${{ matrix.platform.artifact-name }}-msix
           path: packages/app-core/platforms/electrobun/artifacts/*.msix
