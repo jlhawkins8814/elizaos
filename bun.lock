@@ -3081,7 +3081,7 @@
       "dependencies": {
         "@elizaos/core": "workspace:*",
         "@slack/bolt": "^5.0.0",
-        "@slack/web-api": "^7.15.2",
+        "@slack/web-api": "^8.3.0",
       },
       "devDependencies": {
         "@biomejs/biome": "2.5.8",
