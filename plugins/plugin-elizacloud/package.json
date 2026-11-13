@@ -99,7 +99,7 @@
     "jose": "^6.2.2",
     "js-tiktoken": "^1.0.21",
     "ox": "1.6.0",
-    "undici": "8.10.0",
+    "undici": "8.12.2",
     "viem": "^2.48.8",
     "ws": "8.21.3"
   },
@@ -117,7 +117,7 @@
     "@typescript/native": "npm:typescript@^7.0.2",
     "typescript": "^6.0.3",
     "vite": "^8.0.0",
-    "vitest": "^4.1.10"
+    "vitest": "^5.1.0"
   },
   "peerDependencies": {
     "@elizaos/ui": "workspace:*",
